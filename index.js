@@ -38,6 +38,7 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  */
 function getLength(numbers) {
   // TODO
+  return numbers.length;
 }
 
 /**
@@ -46,6 +47,12 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+  sum = sum + numbers[i]
+  }
+  return sum;
 }
 
 /**
@@ -54,6 +61,11 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum/numbers.length;
 }
 
 /**
@@ -62,6 +74,13 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  let Min = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < Min) {
+      Min = numbers[i];
+    }
+  }
+  return Min;
 }
 
 /**
@@ -70,6 +89,13 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let Max = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > Max) {
+      Max = numbers[i];
+    }
+  }
+  return Max;
 }
 
 /**
@@ -78,6 +104,21 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  let min = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i]
+    }
+  }
+
+  let max = numbers[0];
+  for (let i = 2; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      max = numbers[i];
+    }
+  }
+return max - min;
+
 }
 
 /**
@@ -86,6 +127,13 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  let evenArry = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenArry.push(numbers[i]);
+    }  
+  }
+  return evenArry;
 }
 
 /**
@@ -94,4 +142,11 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  let oddsArry = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 !==0) {
+      oddsArry.push(numbers[i]);
+    }
+  }
+  return oddsArry;
 }
